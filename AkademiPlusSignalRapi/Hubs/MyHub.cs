@@ -11,7 +11,7 @@ namespace AkademiPlusSignalRapi.Hubs
     { // kişiilerimi tutacak olan liste
         public static List<string> Names { get; set; } = new List<string>();
         //o anda kaç client bağlı olduğunu gösterir
-        public int ClientCount { get; set; } = 0;
+        public static int ClientCount { get; set; } = 0;
         //bir odada max bulunacak kişi sayısı
         public static int RoomCount { get; set; } = 5;
 
