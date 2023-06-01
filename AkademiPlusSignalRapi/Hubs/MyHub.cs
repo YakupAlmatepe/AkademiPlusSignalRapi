@@ -27,12 +27,12 @@ namespace AkademiPlusSignalRapi.Hubs
             Names.Add(name);
             await Clients.All.SendAsync("receivename", name);
         }
-        public async override Task OnConnectedAsync()
+        public  override async Task OnConnectedAsync()
         {
             ClientCount++;
             await Clients.All.SendAsync("recieveclientcount", ClientCount);
         }
-        public async override Task OnDisconnectedAsync(Exception exception)
+        public  override async Task OnDisconnectedAsync(Exception exception)
         {//bağlantı sayısı azaldığında gösterecek
             ClientCount--;
             await Clients.All.SendAsync("recieveclientcount", ClientCount);
